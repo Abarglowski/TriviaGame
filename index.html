@@ -4,18 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Triva Game</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <header id="masthead">
-    </header>
     <div id="main-container" class="container">
         <section class="main-section">
             <p class="rules">There are 5 questions, you have 50 seconds to answer all 5 questions.</p>
             <h2>
-                <button type="button" id="start-button">Start</button>
+                <button type="button" id="start">Start</button>
             </h2>
             <div id="timer"></div>
             <p class="question">How many donuts are there in a bakers dozen?</p>
@@ -42,7 +40,7 @@
                 <input type="radio" name="q3" value="d" id="q3d"><label for="q3d">65</label><br />
             </ul>
 
-            <p class="question">How many hours are in the day during fall, during daylight savings time?</p>
+            <p class="question">How many hours are in the day during daylight savings time in the fall?</p>
             <ul class="answers">
                 <input type="radio" name="q4" value="a" id="q4a"><label for="q4a">24</label><br />
                 <input type="radio" name="q4" value="b" id="q4b"><label for="q4b">25</label><br />
@@ -60,7 +58,8 @@
 
             <button type="button" id="submit">Submit Final Answers</button>
             <div id="results">
-                Show me the answers!
+            The player answered <p id="correct"></p> questions correct
+            The player answered <p id="incorrect"></p> questions incorrect
             </div>
             <button type="button" id="restart">Play Again</button>
         </section>
